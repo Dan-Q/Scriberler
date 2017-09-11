@@ -1,0 +1,68 @@
+@font-face {
+	font-family: 'Goudy Mediaeval';
+	src: url('fonts/GoudyMediaeval-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Goudy Mediaeval';
+	src: url('fonts/GoudyMediaeval-DemiBold.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: -1;
+}
+
+section.visible {
+  opacity: 1;
+  z-index: 1;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+}
+
+.keyboard button {
+  min-height: 2em;
+}
+
+.keyboard .enter {
+  grid-row: 2 / 4;
+  grid-column: -3 /-1;
+}
+
+.keyboard .clear {
+  grid-row: 3;
+  grid-column: -4;
+}
+
+.keyboard .space {
+  grid-row: 4;
+  grid-column: 1 / -1;
+}
+
+#output {
+  font-family: 'Goudy Mediaeval';
+  font-size: 220px;
+  text-transform: lowercase;
+}
+
+#dropcap {
+  float: left;
+}
