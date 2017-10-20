@@ -9,25 +9,21 @@
 <body>
 
   <section id="form">
+    <h1>
+      Scribe your name
+    </h1>
     <p>
-      Enter your name:
+      Enter your name to see it as it might have been hand written into an early English book:
     </p>
     <p>
       <input type="text" id="name" />
     </p>
-    <div class="keyboard" data-for="name">
-      <button>Q</button><button>W</button><button>E</button><button>R</button><button>T</button><button>Y</button><button>U</button><button>I</button><button>O</button><button>P</button><button class="backspace">←</button>
-      <button>A</button><button>S</button><button>D</button><button>F</button><button>G</button><button>H</button><button>J</button><button>K</button><button>L</button>
-      <button>Z</button><button>X</button><button>C</button><button>V</button><button>B</button><button>N</button><button>M</button>
-      <button class="clear">&times;</button>
-      <button class="enter" id="submit-form">↲</button>
-      <button class="space">&nbsp;</button>
-    </div>
+    <div class="keyboard" data-for="name"></div>
   </section>
 
   <section id="result">
     <div id="output">
-      <img id="dropcap" />
+      <div id="dropcap-wrapper"></div>
       <div id="remainder"></div>
     </div>
     <button class="go-to-section" data-section="form">Back</button>

@@ -12,16 +12,24 @@
 	font-style: normal;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   overflow: hidden;
+}
+
+input:focus {
+  outline: 0;
 }
 
 section {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   opacity: 0;
   transition: opacity 0.5s;
@@ -36,10 +44,13 @@ section.visible {
 .keyboard {
   display: grid;
   grid-template-columns: repeat(11, 1fr);
+  width: 1450px;
+  grid-gap: 15px;
 }
 
 .keyboard button {
-  min-height: 2em;
+  line-height: 64px;
+  font-size: 36px;
 }
 
 .keyboard .enter {
@@ -54,15 +65,64 @@ section.visible {
 
 .keyboard .space {
   grid-row: 4;
-  grid-column: 1 / -1;
+  grid-column: 2 / -2;
 }
 
 #output {
   font-family: 'Goudy Mediaeval';
   font-size: 220px;
-  text-transform: lowercase;
+  display: flex;
+  align-items: flex-start;
 }
 
-#dropcap {
-  float: left;
+#form {
+  background: url(/images/bg2.jpg) top left no-repeat;
+  padding: 0 0 0 440px;
+  font-size: 36px;
+}
+
+#form h1 {
+  font-size: 64px;
+  margin: 77px 0 12px;
+}
+
+#name {
+  font-size: 52px;
+  width: 1450px;
+  border: 0;
+  background: rgba(255, 255, 255, 0.25);
+  font-family: inherit;
+  line-height: 1.5;
+  padding: 0 25px;
+}
+
+#result {
+  background: url(/images/bg3.jpg) top left no-repeat;
+  padding: 20vh 25px;
+}
+
+#dropcap-wrapper {
+  width: 300px;
+}
+
+#dropcap-wrapper img {
+  position: absolute;
+}
+
+#output #remainder {
+  clip-path: inset(0% 100% 0% 0%);
+}
+
+#output #dropcap-wrapper img {
+  clip-path: inset(0% 0% 100% 0%);
+}
+
+#output * {
+  transition: clip-path 0s linear;
+}
+
+#output #remainder.show,
+#output #dropcap-wrapper img.show {
+  clip-path: inset(0% 0% 0% 0%);
+  transition: clip-path 4s linear;  
 }
