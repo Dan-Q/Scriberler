@@ -4,7 +4,32 @@
 
 const letters = {
   reset: { css: ['marginLeft', 'marginTop', 'letterSpacing'] },
-  D: { steps: 2, css: { marginLeft: '-18px', marginTop: '17px', letterSpacing: '15px' } }
+  A: { steps: 1, css: {} },
+  B: { steps: 1, css: {} },
+  C: { steps: 1, css: {} },
+  D: { steps: 2, css: { marginLeft: '-18px', marginTop: '17px', letterSpacing: '15px' } },
+  E: { steps: 1, css: {} },
+  F: { steps: 1, css: {} },
+  G: { steps: 1, css: {} },
+  H: { steps: 1, css: {} },
+  I: { steps: 1, css: {} },
+  J: { steps: 1, css: {} },
+  K: { steps: 1, css: {} },
+  L: { steps: 1, css: {} },
+  M: { steps: 1, css: {} },
+  N: { steps: 1, css: {} },
+  O: { steps: 1, css: {} },
+  P: { steps: 1, css: {} },
+  Q: { steps: 1, css: {} },
+  R: { steps: 1, css: {} },
+  S: { steps: 1, css: {} },
+  T: { steps: 1, css: {} },
+  U: { steps: 1, css: {} },
+  V: { steps: 1, css: {} },
+  W: { steps: 1, css: {} },
+  X: { steps: 1, css: {} },
+  Y: { steps: 1, css: {} },
+  Z: { steps: 1, css: {} }
 }
 
 /******************** FUNCTIONS ********************/
