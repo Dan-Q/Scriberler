@@ -126,3 +126,14 @@ section.visible {
   clip-path: inset(0% 0% 0% 0%);
   transition: clip-path 4s linear;  
 }
+
+#actions {
+  margin-top: 12vh;
+  display: flex;
+}
+
+#actions button {
+  padding: 15px 35px;
+  font-size: 32px;
+  line-height: 1.5;
+}
