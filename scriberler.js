@@ -18,7 +18,7 @@ const letters = {
   L: { steps: 1, css: {} },
   M: { steps: 1, css: {} },
   N: { steps: 1, css: {} },
-  O: { steps: 1, css: {} },
+  O: { steps: 3, css: {} },
   P: { steps: 1, css: {} },
   Q: { steps: 1, css: {} },
   R: { steps: 1, css: {} },
