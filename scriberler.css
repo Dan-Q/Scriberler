@@ -110,8 +110,20 @@ section.visible {
 }
 
 #output #remainder {
-  clip-path: inset(0% 100% 0% 0%);
 }
+
+#output #remainder * {
+  clip-path: inset(0% 100% 0% 0%);
+  position: absolute;
+}
+
+#output #remainder1 {
+  -webkit-text-stroke: 1px black;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.75;
+}
+
+#output #remainder2 {}
 
 #output #dropcap-wrapper img {
   clip-path: inset(0% 0% 100% 0%);
@@ -121,15 +133,24 @@ section.visible {
   transition: clip-path 0s linear;
 }
 
-#output #remainder.show,
+#output #remainder .show,
 #output #dropcap-wrapper img.show {
   clip-path: inset(0% 0% 0% 0%);
-  transition: clip-path 4s linear;  
+  transition: clip-path 3s linear;  
+}
+
+#output #remainder .unshow {
+  clip-path: inset(0% 0% 0% 100%);
 }
 
 #actions {
-  margin-top: 12vh;
+  position: absolute;
   display: flex;
+  top: 65vh;
+  left: 0;
+  width: 100%;
+  padding: 0 4em;
+  justify-content: space-evenly;
 }
 
 #actions button {

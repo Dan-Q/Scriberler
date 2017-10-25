@@ -4,7 +4,7 @@
 
 const letters = {
   reset: { css: ['marginLeft', 'marginTop', 'letterSpacing'] },
-  A: { steps: 1, css: {} },
+  A: { steps: 2, css: { marginLeft: '-45px'} },
   B: { steps: 1, css: {} },
   C: { steps: 1, css: {} },
   D: { steps: 2, css: { marginLeft: '-18px', marginTop: '17px', letterSpacing: '15px' } },
@@ -50,9 +50,10 @@ const submitForm = event => {
   const dropcapValue = nameValue.slice(0, 1);
   const dropcap = letters[dropcapValue];
   const dropcapWrapper = document.getElementById('dropcap-wrapper');
-  const remainder = document.getElementById('remainder');
+  const remainder1 = document.getElementById('remainder1');
+  const remainder2 = document.getElementById('remainder2');
   const startDrawTime = 100; // milliseconds
-  const drawTime = 4000; // milliseconds, per stage
+  const drawTime = 3000; // milliseconds, per stage
   /* Set up text */
   if(nameValue == '') return;
   let dropcapHTML = '';
@@ -60,15 +61,18 @@ const submitForm = event => {
     dropcapHTML = dropcapHTML + `<img src="dropcaps/${dropcapValue}${i+1}.png" />`;
   }
   dropcapWrapper.innerHTML = dropcapHTML;
-  remainder.textContent = nameValue.slice(1);
+  remainder1.textContent = remainder2.textContent = nameValue.slice(1);
   letters.reset.css.forEach(prop => {
     if(dropcap.css[prop]){
-      remainder.style[prop] = dropcap.css[prop];
+      remainder1.style[prop] = dropcap.css[prop];
+      remainder2.style[prop] = dropcap.css[prop];
     } else {
-      remainder.style[prop] = ''
+      remainder1.style[prop] = ''
+      remainder2.style[prop] = '';
     }
   });
-  remainder.classList.remove('show');
+  remainder1.classList.remove('show', 'unshow');
+  remainder2.classList.remove('show');
   /* Reset form */
   name.value = '';
   /* Show results page */
@@ -78,15 +82,20 @@ const submitForm = event => {
   setTimeout(() => {
     dropcapWrapper.querySelector('img:not(.show)').classList.add('show');
   }, startDrawTime);
-  // Draw rest of text
+  // Draw rest of text - outline
   setTimeout(() => {
-    remainder.classList.add('show');
-  }, startDrawTime + drawTime);
+    remainder1.classList.add('show');
+  }, startDrawTime + (drawTime * 1));
+  // Draw rest of text - fill
+  setTimeout(() => {
+    remainder1.classList.add('unshow');
+    remainder2.classList.add('show');
+  }, startDrawTime + (drawTime * 2));
   // Draw subsequent steps of dropcap
   for(let i = 1; i < dropcap.steps; i++){
     setTimeout(() => {
       dropcapWrapper.querySelector('img:not(.show)').classList.add('show');
-    }, startDrawTime + (drawTime * (i + 1)));
+    }, startDrawTime + (drawTime * (i + 2)));
   }
 }
 
