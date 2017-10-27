@@ -5,8 +5,8 @@
 const letters = {
   reset: { css: ['marginLeft', 'marginTop', 'letterSpacing'] },
   A: { steps: 2, css: { marginLeft: '-45px'} },
-  B: { steps: 1, css: {} },
-  C: { steps: 1, css: {} },
+  B: { steps: 2, css: {} },
+  C: { steps: 3, css: {} },
   D: { steps: 2, css: { marginLeft: '-18px', marginTop: '17px', letterSpacing: '15px' } },
   E: { steps: 1, css: {} },
   F: { steps: 1, css: {} },
