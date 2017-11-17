@@ -22,7 +22,7 @@ const letters = {
   P: { steps: 1, css: {} },
   Q: { steps: 1, css: {} },
   R: { steps: 1, css: {} },
-  S: { steps: 1, css: {} },
+  S: { steps: 2, css: { marginTop: '25px' } },
   T: { steps: 1, css: {} },
   U: { steps: 1, css: {} },
   V: { steps: 1, css: {} },
