@@ -123,7 +123,9 @@ section.visible {
   opacity: 0.75;
 }
 
-#output #remainder2 {}
+#output #remainder2 {
+  opacity: 0.8;
+}
 
 #output #dropcap-wrapper img {
   clip-path: inset(0% 0% 100% 0%);
