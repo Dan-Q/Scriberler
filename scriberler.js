@@ -6,16 +6,16 @@ const letters = {
   reset: { css: ['marginLeft', 'marginTop', 'letterSpacing'] },
   A: { steps: 3, css: { marginLeft: '15px'} },
   B: { steps: 3, css: {} },
-  C: { steps: 3, css: {} },
+  C: { steps: 3, css: { marginTop: '22px', marginLeft: '25px' } },
   D: { steps: 2, css: { marginLeft: '10px'} },
   E: { steps: 3, css: {} },
   F: { steps: 3, css: {} },
   G: { steps: 3, css: {} },
   H: { steps: 3, css: {} },
-  I: { steps: 3, css: {} },
+  I: { steps: 3, css: { marginLeft: '-18px' } },
   J: { steps: 3, css: {} },
   K: { steps: 3, css: {} },
-  L: { steps: 3, css: {} },
+  L: { steps: 3, css: { marginLeft: '-34px'} },
   M: { steps: 3, css: {} },
   N: { steps: 3, css: {} },
   O: { steps: 3, css: {} },
@@ -26,10 +26,10 @@ const letters = {
   T: { steps: 4, css: {} },
   U: { steps: 3, css: {} },
   V: { steps: 3, css: {} },
-  W: { steps: 3, css: {} },
+  W: { steps: 3, css: { marginTop: '58px', marginLeft: '18px' } },
   X: { steps: 3, css: {} },
   Y: { steps: 3, css: {} },
-  Z: { steps: 3, css: {} }
+  Z: { steps: 3, css: { marginTop: '62px', marginLeft: '-10px' } }
 }
 
 /******************** FUNCTIONS ********************/
