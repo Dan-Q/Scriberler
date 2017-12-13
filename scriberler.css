@@ -19,6 +19,7 @@
 body {
   margin: 0;
   overflow: hidden;
+  font-family: 'Goudy Mediaeval', serif;
 }
 
 input:focus {
@@ -34,6 +35,9 @@ section {
   opacity: 0;
   transition: opacity 0.5s;
   z-index: -1;
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
 }
 
 section.visible {
@@ -46,6 +50,7 @@ section.visible {
   grid-template-columns: repeat(11, 1fr);
   width: 1450px;
   grid-gap: 15px;
+  font-family: sans-serif;
 }
 
 .keyboard button {
@@ -76,28 +81,29 @@ section.visible {
 }
 
 #form {
-  background: url(/images/bg2.jpg) top left no-repeat;
+  background-image: url(images/bg2.jpg);
   padding: 0 0 0 440px;
   font-size: 36px;
 }
 
 #form h1 {
   font-size: 64px;
-  margin: 77px 0 12px;
+  margin: 113px 0 84px;
 }
 
 #name {
   font-size: 52px;
   width: 1450px;
   border: 0;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.5);
+  margin-top: 32px;
   font-family: inherit;
   line-height: 1.5;
   padding: 0 25px;
 }
 
 #result {
-  background: url(/images/bg3.jpg) top left no-repeat;
+  background-image: url(images/bg3.jpg);
   padding: 20vh 25px;
 }
 

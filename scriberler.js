@@ -35,6 +35,7 @@ const letters = {
 /******************** FUNCTIONS ********************/
 
 const showSection = id => {
+  _gaq.push(['_trackPageview', `/__data/Scriberler/${id}`]);
   Array.prototype.forEach.call(document.getElementsByTagName('section'), section => {
     if(section.id == id) {
       section.classList.add('visible');
@@ -45,6 +46,7 @@ const showSection = id => {
 };
 
 const submitForm = event => {
+  _gaq.push(['_trackPageview', '/__data/Scriberler/submitForm']);
   const name = document.getElementById('name');
   const nameValue = name.value.trim();
   const dropcapValue = nameValue.slice(0, 1);
