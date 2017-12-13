@@ -9,7 +9,7 @@ const letters = {
   C: { steps: 3, css: {} },
   D: { steps: 3, css: { marginLeft: '5px'} },
   E: { steps: 3, css: { marginLeft: '10px'} },
-  F: { steps: 3, css: { marginLeft: '-55px'; marginTop: '25px'} },
+  F: { steps: 3, css: { marginLeft: '-55px', marginTop: '25px'} },
   G: { steps: 3, css: {} },
   H: { steps: 3, css: {} },
   I: { steps: 3, css: { marginLeft: '-15px'} },
@@ -26,7 +26,7 @@ const letters = {
   T: { steps: 4, css: {} },
   U: { steps: 3, css: { marginTop: '20px'} },
   V: { steps: 3, css: { marginLeft: '-50px'} },
-  W: { steps: 3, css: { marginLeft: '-20px'; marginTop: '25px'} },
+  W: { steps: 3, css: { marginLeft: '-20px', marginTop: '25px'} },
   X: { steps: 3, css: { marginLeft: '20px'} },
   Y: { steps: 3, css: { marginLeft: '20px'} },
   Z: { steps: 3, css: {} }
