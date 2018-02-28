@@ -111,7 +111,7 @@ Array.prototype.forEach.call(document.getElementsByClassName('keyboard'), keyboa
     <button>A</button><button>S</button><button>D</button><button>F</button><button>G</button><button>H</button><button>J</button><button>K</button><button>L</button>
     <button>Z</button><button>X</button><button>C</button><button>V</button><button>B</button><button>N</button><button>M</button>
     <button class="clear">&times;</button>
-    <button class="enter" id="submit-form">↲</button>
+    <button class="enter" id="submit-form">Go</button>
     <button class="space">&nbsp;</button>
   `;
   Array.prototype.forEach.call(keyboard.getElementsByTagName('button'), button => {
